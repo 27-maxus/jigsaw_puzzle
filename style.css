@@ -1,6 +1,7 @@
 body{
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -8,11 +9,13 @@ body{
     background-color: #0f0f0f;
 }
 
-#puzzle-container {
+#puzzle-container,
+#dropzone {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     gap: 5px;
+    margin: 200px 0;
 }
 
 .puzzle-piece {
@@ -24,14 +27,6 @@ body{
     position: relative;
 }
 
-#dropzone {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 5px;
-    border: 2px dashed #aaa;
-    padding: 10px;
-}
 
 .drop-target {
     width: 100px;
@@ -40,10 +35,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.hidden {
-    visibility: hidden;
 }
 
 #completion-video {
@@ -65,9 +56,15 @@ body{
 
 @media (max-width: 600px) {
     #puzzle-container,
-    #drop-target {
+    #dropzone {
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(3, 70px);
+    }
+
+    .puzzle-piece,
+    .drop-target {
         width: 70px;
-        height: 70px;
+        height: 70ox;
         background-size: 210px 210px;
     }
 }
