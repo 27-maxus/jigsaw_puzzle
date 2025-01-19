@@ -5,7 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 10px;
     background-color: #0f0f0f;
     padding: 20px;
 }
@@ -16,7 +16,7 @@ body{
     grid-template-rows: repeat(3, 100px);
     gap: 10px;
     margin: 10px ;
-    padding: 10;
+    padding: 10px;
 }
 
 .puzzle-piece {
@@ -26,7 +26,6 @@ body{
     border: 1px solid #ddd;
     cursor: grab;
     position: relative;
-    padding: 10;
 }
 
 #dropzone {
@@ -65,7 +64,7 @@ body{
     max-height: 90%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 375px) and (max-height: 812px) {
     #puzzle-container,
     #dropzone {
         grid-template-columns: repeat(3, 70px);
@@ -79,8 +78,5 @@ body{
         width: 70px;
         height: 70px;
         background-size: 210px 210px;
-        border-width: 1px;
-        cursor: grab;
-        position: relative;
     }
 }
