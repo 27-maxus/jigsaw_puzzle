@@ -7,6 +7,7 @@ body{
     height: 100vh;
     margin: 0;
     background-color: #0f0f0f;
+    padding: 20px;
 }
 
 #puzzle-container,
@@ -14,8 +15,8 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 3px;
-    margin: 5px 0;
+    gap: 10px;
+    margin: 10px 0;
 }
 
 .puzzle-piece {
