@@ -76,7 +76,7 @@ body{
     .drop-target {
         width: 70px;
         height: 70px;
-        background-size: 210px 210px;
+        background-size: 300px 3000px;
         border-width: 1px;
         cursor: grab;
         position: relative;
