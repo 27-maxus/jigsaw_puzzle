@@ -38,7 +38,7 @@ function createDropTargets() {
     pieces.forEach(index => {
         const target = document.createElement('div');
         target.classList.add('drop-target');
-        target.classList,index = index;
+        target.classList.index = index;
         dropzone.appendChild(target);
 
         target.addEventListener('dragover', event => {

@@ -21,6 +21,7 @@ body{
     background-size: 300px 300px;
     border: 1px solid #ddd;
     cursor: grab;
+    position: relative;
 }
 
 #dropzone {
@@ -60,4 +61,13 @@ body{
 #completion-video video {
     max-width: 90%;
     max-height: 90%;
+}
+
+@media (max-width: 600px) {
+    #puzzle-container,
+    #drop-target {
+        width: 70px;
+        height: 70px;
+        background-size: 210px 210px;
+    }
 }
