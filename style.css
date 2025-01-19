@@ -61,14 +61,14 @@ body{
     #dropzone {
         grid-template-columns: repeat(3, 70px);
         grid-template-rows: repeat(3, 70px);
-        gap: 3px;
+        gap: 10px;
         margin-bottom: 5px;
     }
 
     .puzzle-piece,
     .drop-target {
         width: 70px;
-        height: 70ox;
+        height: 70px;
         background-size: 210px 210px;
         border-width: 1px;
         cursor: grab;
