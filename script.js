@@ -22,6 +22,10 @@ function createPuzzlePieces(){
     shuffledPieces.forEach(index => {
         const piece = document.createElement('div');
         piece.classList.add('puzzle-piece');
+
+        //calculate the correct background position for each piece
+        const size = 300; //original image size
+        const pieceSize = size / 3; //size of each piece
         piece.style.backgroundImage = `url(${imageURL})`;
         piece.style.backgroundPosition = `-${(index % 3) * 100}px -${Math.floor(index / 3) * 100}px`;
         piece.draggable = true;
