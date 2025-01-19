@@ -10,8 +10,7 @@ body{
     padding: 20px;
 }
 
-#puzzle-container,
-#dropzone {
+#puzzle-container {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
@@ -26,6 +25,14 @@ body{
     border: 1px solid #ddd;
     cursor: grab;
     position: relative;
+}
+
+#dropzone {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 10px 0;
 }
 
 
