@@ -29,7 +29,7 @@ function createPuzzlePieces(){
         puzzleContainer.appendChild(piece);
 
         piece.addEventListener(`dragstart`, event => {
-            event.dataTransfer.setData('text/plain', pieces.dataset.index);
+            event.dataTransfer.setData('text/plain', index);
         });
     });
 }
