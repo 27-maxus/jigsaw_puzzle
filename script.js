@@ -57,7 +57,11 @@ function createDropTargets() {
                 piece.style.position = 'relative'; //make sure it stays within the target
                 piece.style.left = '0';
                 piece.style.top = '0';
-                successSound.play(); //play success sound
+
+                successSound.currentTime = 0;
+                successSound.play().catch(error => {
+                    console.error("playback failed:", error);
+                });
                 completedPieces++;
                 
                 //check if the puzzle is complete

@@ -14,7 +14,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 5px;
+    gap: 3px;
     margin: 5px 0;
 }
 
@@ -60,6 +60,8 @@ body{
     #dropzone {
         grid-template-columns: repeat(3, 70px);
         grid-template-rows: repeat(3, 70px);
+        gap: 3px;
+        margin-bottom: 5px;
     }
 
     .puzzle-piece,
@@ -67,5 +69,8 @@ body{
         width: 70px;
         height: 70ox;
         background-size: 210px 210px;
+        border-width: 1px;
+        cursor: grab;
+        position: relative;
     }
 }
