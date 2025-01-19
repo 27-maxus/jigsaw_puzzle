@@ -29,7 +29,7 @@ function createPuzzlePieces(){
         puzzleContainer.appendChild(piece);
 
         piece.addEventListener(`dragstart`, event => {
-            event.dataTransfer.setData('text/plain', index);
+            event.dataTransfer.setData('text/plain', pieces.dataset.index);
         });
     });
 }
@@ -38,27 +38,32 @@ function createDropTargets() {
     pieces.forEach(index => {
         const target = document.createElement('div');
         target.classList.add('drop-target');
-        target.classList.index = index;
+        target.dataset.index = index;
         dropzone.appendChild(target);
 
         target.addEventListener('dragover', event => {
-            event.preventDefault();
+            event.preventDefault(); //allow drop
         });
 
         target.addEventListener('drop', event => {
             event.preventDefault();
             const droppedIndex = event.dataTransfer.getData('text/plain');
-
-            if (droppedIndex == target.dataset.index) {
+            
+            //check if the dropped piece matches the target index
+            if (droppedIndex === target.dataset.index) {
                 const piece = document.querySelector(`.puzzle-piece[data-index='${droppedIndex}']`);
-                target.appendChild(piece);
-                piece.draggable = false;
-                successSound.play();
+                target.appendChild(piece); //move the piece to the target
+                piece.draggable = false; //disable dragging for the placed piece
+                piece.style.position = 'relative'; //make sure it stays within the target
+                piece.style.left = '0';
+                piece.style.top = '0';
+                successSound.play(); //play success sound
                 completedPieces++;
-
+                
+                //check if the puzzle is complete
                 if (completedPieces === pieces.length) {
                     setTimeout(() => {
-                        completionVideo.style.display = 'flex';
+                        completionVideo.style.display = 'flex'; //show completion video
                     }, 500);
                 }
             }
@@ -66,5 +71,6 @@ function createDropTargets() {
     });
 }
 
+//initialize the puzzle
 createPuzzlePieces();
 createDropTargets();
