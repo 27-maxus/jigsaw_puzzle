@@ -1,5 +1,5 @@
 console.log('javascript is running fine');
-const imageURL = 'image.jpg'; //replace with the photo in need
+const imageURL = 'image.jpeg'; //replace with the photo in need
 const puzzleContainer = document.getElementById('puzzle-container');
 const dropzone = document.getElementById('dropzone');
 const successSound = document.getElementById('success-sound');
